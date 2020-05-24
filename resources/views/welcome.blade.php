@@ -70,6 +70,12 @@
     </style>
 </head>
 <body>
+
+    <form action="/update" method="POST">
+        {{ csrf_field() }} <!--   token trong form -->
+        <input type="text" name="ho ten">
+        <input type="submit" name="">
+    </form>
     <div class="flex-center position-ref full-height">
         @if (Route::has('login'))
         <div class="top-right links">
@@ -104,22 +110,16 @@
 
 
     </div>
-    <div class="info">
-        <!-- <tr>
-            <td>Họ và tên: Đỗ Tùng Lâm</td>
-            <td>Năm sinh: 1998</td>
-            <td>Trường học: Đại học kinh tế kỹ thuật công nghiệp</td>
-            <td>Mục tiêu: Lập trình viên PHP</td>
-            
-        </tr> -->
+    <!-- <div class="info">
+       
         <center>
-         <p>Họ và tên: Đỗ Tùng Lâm</p>
+         <p>Họ và tên: Đỗ Tùng Lâm </p>
          <p>Năm sinh: 1998</p>
          <p>Trường học: Đại học kinh tế kỹ thuật công nghiệp</p>
          <p>Mục tiêu: Lập trình viên PHP</p>  
      </center>
 
 
- </div>
+ </div> -->
 </body>
 </html>
